@@ -1,0 +1,28 @@
+<div>
+    <%= form_tag('place', method: 'post') do %>
+        <div class="row py-5">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-3 text-center pb-5">
+                        <h4>PLACE YOUR TOY</h4>
+                    </div>
+                    <p class="col-sm-6">Select X Position</p>
+                    <div class="col-sm-6 text-right">
+                        <%= select_tag :x_position, options_for_select([["Select One", ""], "1", "2", "3", "4", "5"]) %>
+                    </div>
+                    <p class="col-sm-6">Select Y Position</p>
+                    <div class="col-sm-6 text-right">
+                        <%= select_tag :y_position, options_for_select([["Select One", ""], "1", "2", "3", "4", "5"]) %>
+                    </div>
+                    <p class="col-sm-6">Select Direction</p>
+                    <div class="col-sm-6 text-right">
+                        <%= select_tag :direction, options_for_select([["Select One", ""], 'East', 'South', 'West', 'North']) %>
+                    </div>
+                    <div class="col-sm-6 offset-sm-3 pt-5">
+                        <%= submit_tag "Place Toy", class: "btn btn-primary btn-custom"  %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

@@ -1,0 +1,39 @@
+ <div class="jumbotron text-center py-4">
+    <h1>Welcome to Toy Robot Simulator</h1>
+    <p>Developed by Kunal Bhavsar</p>
+    <div class="row pt-5">
+        <div class="col-sm-4">
+            <%= link_to 'Place Toy', 'init_place',  method: :patch, class: 'btn btn-primary btn-custom'  %>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <%= link_to 'Reset', 'reset', method: :patch, class: 'btn btn-primary btn-custom'  %>
+        </div>
+        <div class="col-sm-4">
+            <%= link_to 'Turn Left', 'turn_left', method: :patch, class: 'btn btn-primary btn-custom'  %>
+        </div>
+        <div class="col-sm-4">
+            <%= link_to 'Move', 'move', method: :patch, class: 'btn btn-primary btn-custom'  %>
+        </div>
+        <div class="col-sm-4">
+            <%= link_to 'Turn Right', 'turn_right', method: :patch, class: 'btn btn-primary btn-custom'  %>
+        </div>
+    </div>
+ </div>
+
+<div class="row px-5">
+    <div class="col-sm-6">
+        <h3>Current Position</h3>
+    </div>
+    <div class="col-sm-6 text-right pb-5">
+        <%= @service.report %>
+    </div>
+    <div class="col-sm-6">
+        <h3>Actions Performed</h3>
+    </div>
+    <div class="col-sm-6 text-right">
+        <% @service.actions.each do |action| %>
+            <p><%= action %><p>
+        <% end %>
+    </div>
+</div>
