@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   patch 'turn_left', :to => 'toy#turn_left'
   patch 'turn_right', :to => 'toy#turn_right'
   patch 'reset', :to => 'toy#reset'
+
+  get 'init_place', :to => 'toy#index'
+  get 'move', :to => 'toy#index'
+  get 'turn_left', :to => 'toy#index'
+  get 'turn_right', :to => 'toy#index'
+  get 'reset', :to => 'toy#index'
 end
